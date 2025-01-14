@@ -22,7 +22,7 @@ class HomeManager {
     /**
      * @param string $playerName
      * @param string $homeName
-     * @param Vector3 $location
+     * @param Location $location
      * @return void
      */
     public function setHome(string $playerName, string $homeName, Location $location): void {
