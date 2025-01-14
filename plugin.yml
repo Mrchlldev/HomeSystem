@@ -1,0 +1,19 @@
+name: HomeSystem
+version: 1.0.0
+main: Mrchlldev\HomeSystem\Main
+api: [5.0.0]
+author: Mrchlldev
+
+permissions:
+  homesystem.command.sethome:
+    description: Allows setting a home location.
+    default: true
+  homesystem.command.home:
+    description: Allows teleporting to a specific home.
+    default: true
+  homesystem.command.removehome:
+    description: Allows remove a home names.
+    default: true
+  homesystem.command.getmyhome:
+    description: Allows showing all home names.
+    default: true
