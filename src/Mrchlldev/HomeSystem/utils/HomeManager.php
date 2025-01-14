@@ -4,6 +4,7 @@ namespace Mrchlldev\HomeSystem\utils;
 
 use pocketmine\Server;
 use pocketmine\world\World;
+use pocketmine\math\Vector3;
 use pocketmine\entity\Location;
 use pocketmine\utils\Config;
 
