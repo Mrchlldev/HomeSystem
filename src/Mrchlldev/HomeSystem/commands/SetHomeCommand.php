@@ -61,7 +61,7 @@ class SetHomeCommand extends Command {
             return;
         }
 
-        $homeManager->setHome($sender->getName(), $homeName, $sender->getPosition());
+        $homeManager->setHome($sender->getName(), $homeName, $sender->getLocation());
         $this->plugin->sendMessageWithPrefix($sender, "§aHome '$homeName' has been set!");
     }
 }
