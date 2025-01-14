@@ -4,7 +4,7 @@ namespace Mrchlldev\HomeSystem\utils;
 
 use pocketmine\Server;
 use pocketmine\world\World;
-use pocketmine\math\Vector3;
+use pocketmine\entity\Location;
 use pocketmine\utils\Config;
 
 class HomeManager {
@@ -25,7 +25,7 @@ class HomeManager {
      * @param Vector3 $location
      * @return void
      */
-    public function setHome(string $playerName, string $homeName, Vector3 $location): void {
+    public function setHome(string $playerName, string $homeName, Location $location): void {
         $homes = $this->homeData->get($playerName, []);
         $homes[$homeName] = [
             "x" => $location->getX(),
