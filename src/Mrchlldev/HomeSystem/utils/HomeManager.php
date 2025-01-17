@@ -71,6 +71,16 @@ class HomeManager {
      * @param string $homeName
      * @return bool
      */
+    public function existsHome(string $playerName, string $homeName): bool {
+        $homes = $this->homeData->get($playerName, []);
+        return isset($homes[$homeName]);
+    }
+
+    /**
+     * @param string $playerName
+     * @param string $homeName
+     * @return bool
+     */
     public function removeHome(string $playerName, string $homeName): bool {
         $homes = $this->homeData->get($playerName, []);
         if (isset($homes[$homeName])) {
