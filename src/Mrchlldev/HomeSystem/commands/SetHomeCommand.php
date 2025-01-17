@@ -56,6 +56,11 @@ class SetHomeCommand extends Command {
         $currentHomeCount = $homeManager->getHomeCount($sender->getName());
         $homeLimit = $this->plugin->getHomeLimitForPlayer($sender);
 
+        if($homeManager->existsHome($sender->getName(), $homeName)){
+            $this->plugin->sendMessageWithPrefix($sender, "§cYou already have home with name $homeName.");
+            return;
+        }
+
         if ($currentHomeCount >= $homeLimit) {
             $this->plugin->sendMessageWithPrefix($sender, "§cYou have reached the maximum number of homes allowed.");
             return;
